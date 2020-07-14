@@ -48,7 +48,7 @@
                     </div>
                 </div> -->
                 <div class="col-lg-9 col-md-9">
-                    <div class="header__nav">
+                    <div class="header__nav" style="visibility: hidden;">
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="./index.php">Home</a></li>
@@ -86,12 +86,12 @@
                 <div class="col-lg-12">
                     <div class="hero__text">
                         <div class="section-title">
-                            <h2>Discover The Best Music Lyrics for You</h2>
+                            <h2 class="hints"></h2>
                             <!-- <p>1.118.940.376 The best service package is waiting for you</p> -->
                         </div>
                         <div class="hero__search__form" id="searchArea">
                             <form action="index.php" method="get" name="cari">
-                                <input type="text" name="pencarian" placeholder="Temukan Lirik Lagumu Disini!" style="width: 62.5%">
+                                <input data-toggle="tooltip" data-placement="input" title="Gunakan Juga Fitur Speech Recognition dengan Tap Sembarangan Pada Bagian Platform !" type="text" name="pencarian" id="output" class="output" placeholder="Temukan Lirik Lagumu Disini!" style="width: 62.5%">
                                 <div class="select__option">
                                     <select name="pilihan">
                                         <option id="artistLyric" value="lirik">Lirik Lagu</option>
@@ -572,7 +572,7 @@
                         <!-- <div class="footer__about__logo">
                             <a href="./index.html"><img src="img/footer-logo.png" alt=""></a>
                         </div> -->
-                        <p>Dibuat dengan sepenuh hati dengan dibantu kerjasama dengan anggota Kelompok 7 :)</p>
+                        <p><b>Dibuat dengan Sepenuh <i class="fa fa-heart" aria-hidden="true"></i> menghasilkan <i>Platform</i> Pencarian Lirik Musik Kesayangan Kalian.</b></p>
                     </div>
                 </div>
                 <div class="col-lg-4 offset-lg-1 col-md-6">
@@ -653,7 +653,13 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript">
+    <script src="js/script.js"></script>
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+    <!-- <script type="text/javascript">
     
         function getLyrics(){
 
@@ -732,6 +738,6 @@
             }    
           });
          };
-    </script>
+    </script> -->
 </body>
 </html>
